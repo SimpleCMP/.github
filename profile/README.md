@@ -1,4 +1,7 @@
-# SimpleCMP
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SimpleCMP/.github/main/profile/logo-dark.svg">
+  <img alt="SimpleCMP" src="https://raw.githubusercontent.com/SimpleCMP/.github/main/profile/logo-light.svg" width="320">
+</picture>
 
 **An open-source Consent Management Platform with auto-detection, a shared service database, and a CMS bridge.**
 
