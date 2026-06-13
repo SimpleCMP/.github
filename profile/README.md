@@ -18,16 +18,21 @@ SimpleCMP helps websites collect, document, and honour user consent for cookies 
 - **CMS bridge** — a documented webhook protocol (HMAC-signed, schema v2) that lets any CMS push detections into the consent backend and pull banner / service config back out.
 - **Headless engine** — the same JS core runs in plain HTML, in a CMS plugin, in a SPA, or behind a server-rendered template. Pick the integration layer that fits.
 - **Click-to-enable embeds** — blocked YouTube, Vimeo, or Maps embeds get an in-place consent prompt instead of disappearing silently.
+- **Universal pre-consent blocking** — block third-party scripts, iframes, and pixels (and optionally stylesheets such as Google Fonts) before consent, with click-to-enable recovery — no per-embed markup required.
+- **Region-aware regimes** — drive opt-in (GDPR), opt-out (US / CCPA "Do Not Sell"), or no-banner behaviour per visitor region.
+- **Google Consent Mode v2** — signal a site's existing Google tags from the consent state; SimpleCMP never loads gtag/GTM itself.
+- **Compliance audit** — built-in DSGVO / WCAG checks (equal-prominence buttons, contrast, accessible names) you can run against a live banner.
 - **GDPR-default UX** — "Reject all" sits equal to "Accept all"; no dark patterns, no pre-checked categories.
 - **Browser consent signals** — honours `Sec-GPC` (Global Privacy Control) where applicable.
-- **27 language packs** out of the box — German, English, French, Italian, Spanish, and more.
+- **26 language packs** out of the box — German, English, French, Italian, Spanish, and more.
 
 ## Repositories
 
 | Repo | What it is | Status |
 |---|---|---|
-| [`simplecmp`](https://github.com/SimpleCMP/simplecmp) | Core engine: web components, detection, persistence, CMS-bridge sender | active |
-| [`t3-simplecmp`](https://github.com/SimpleCMP/t3-simplecmp) | TYPO3 v14 extension: backend module, detection review, banner design, webhook receiver | active |
+| [`simplecmp`](https://github.com/SimpleCMP/simplecmp) | Core engine: web components, detection, region regimes, Consent Mode v2, compliance audit, CMS-bridge sender | active |
+| [`t3-simplecmp`](https://github.com/SimpleCMP/t3-simplecmp) | TYPO3 v14 extension: backend detection triage, service registry + library browser, Theme Designer, managed trackers (Consent Mode v2), webhook receiver | active |
+| [`services-library`](https://github.com/SimpleCMP/services-library) | Shared service database: 360+ curated tracker classifiers as JSON, plus a thin PHP loader | active |
 | `wp-simplecmp` | WordPress plugin: settings page, block-editor trigger, detection dashboard, multisite, WPML / Polylang | planned — see [the WordPress page](https://simplecmp.eu/en/wordpress.html) |
 
 ## Getting started
